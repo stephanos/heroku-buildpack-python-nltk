@@ -21,11 +21,11 @@ cd .heroku
 # Check that nltk was installed by pip, otherwise obviously not needed
 python -m nltk.downloader -h >/dev/null 2>&1
 if [ $? -eq 0 ]; then
-    ntlk_packages_definition="$BUILD_DIR/.nltk_packages"
-    if [ -f "$ntlk_packages" ]; then
-        ntlk_packages=$(tr "\n" " " < "$ntlk_packages_definition")
+    nltk_packages_definition="$BUILD_DIR/.nltk_packages"
+    if [ -f "$nltk_packages_definition" ]; then
+        nltk_packages=$(tr "\n" " " < "$nltk_packages_definition")
         puts-step "Downloading NLTK packages $nltk_packages"
-        python -m nltk.downloader "$ntlk_packages"
+        python -m nltk.downloader "$nltk_packages"
         set-env NLTK_DATA "/app/.heroku/nltk_data"
     else
         puts-warn ".nltk_packages not found, not downloading anything"
