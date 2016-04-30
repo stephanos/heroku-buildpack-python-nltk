@@ -26,7 +26,11 @@ if [ $? -eq 0 ]; then
         ntlk_packages=$(tr "\n" " " < "$ntlk_packages_definition")
         puts-step "Downloading NLTK packages $nltk_packages"
         python -m nltk.downloader "$ntlk_packages"
+    else
+        puts-warn ".nltk_packages not found, not downloading anything"
     fi
+else
+    puts-warn "nltk not apparently installed, not downloading packages"
 fi
 
 cd ..
