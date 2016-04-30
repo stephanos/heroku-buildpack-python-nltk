@@ -26,6 +26,7 @@ if [ $? -eq 0 ]; then
         ntlk_packages=$(tr "\n" " " < "$ntlk_packages_definition")
         puts-step "Downloading NLTK packages $nltk_packages"
         python -m nltk.downloader "$ntlk_packages"
+        set-env NLTK_DATA "/app/.heroku/nltk_data"
     else
         puts-warn ".nltk_packages not found, not downloading anything"
     fi
