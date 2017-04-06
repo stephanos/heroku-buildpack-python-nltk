@@ -4,10 +4,11 @@ wget http://ml.nec-labs.com/senna/senna-v3.0.tgz
 tar -xzf senna-v3.0.tgz
 rm $WORKING_DIR/senna/senna*
 rm senna-v3.0.tgz 
-cd $WORKING_DIR/senna 
+mkdir -p $WORKING_DIR/util
+cd $WORKING_DIR/util/senna 
 gcc -o senna-linux64 -O3 -ffast-math *.c
-rm $WORKING_DIR/senna/sanity*
-rm $WORKING_DIR/senna/*.c 
-rm $WORKING_DIR/senna/*.h 
-rm -R $WORKING_DIR/senna/embeddings 
-rm -R $WORKING_DIR/senna/doc 
+rm $WORKING_DIR/util/senna/sanity*
+rm $WORKING_DIR/util/senna/*.c 
+rm $WORKING_DIR/util/senna/*.h 
+rm -R $WORKING_DIR/util/senna/embeddings 
+rm -R $WORKING_DIR/util/senna/doc 
