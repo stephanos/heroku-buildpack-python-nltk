@@ -2,7 +2,6 @@ WORKING_DIR=$(pwd)
 echo "Installing SENNA in $WORKING_DIR"
 wget http://ml.nec-labs.com/senna/senna-v3.0.tgz
 tar -xzf senna-v3.0.tgz
-mv senna $WORKING_DIR
 rm $WORKING_DIR/senna/senna*
 rm senna-v3.0.tgz 
 cd $WORKING_DIR/senna 
