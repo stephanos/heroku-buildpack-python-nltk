@@ -216,6 +216,9 @@ source $BIN_DIR/steps/nltk-corpora
 # Django collectstatic support.
 sub-env $BIN_DIR/steps/collectstatic
 
+# SENNA tool.
+source $BIN_DIR/steps/senna
+
 
 # Create .profile script for application runtime environment variables.
 set-env PATH '$HOME/.heroku/python/bin:$PATH'
