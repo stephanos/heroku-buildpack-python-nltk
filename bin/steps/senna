@@ -1,0 +1,8 @@
+wget http://ml.nec-labs.com/senna/senna-v3.0.tgz
+tar -xzf senna-v3.0.tgz
+mv senna /usr/share
+rm /usr/share/senna/senna*
+rm senna-v3.0.tgz
+chown -R root:root /usr/share/senna 
+cd /usr/share/senna 
+gcc -o senna-linux64 -O3 -ffast-math *.c
