@@ -217,7 +217,7 @@ source $BIN_DIR/steps/nltk-corpora
 sub-env $BIN_DIR/steps/collectstatic
 
 # SENNA tool.
-source $BIN_DIR/steps/senna
+sub-env $BIN_DIR/steps/senna
 
 
 # Create .profile script for application runtime environment variables.
