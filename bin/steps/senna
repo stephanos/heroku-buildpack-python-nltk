@@ -9,5 +9,5 @@ gcc -o senna-linux64 -O3 -ffast-math *.c
 rm $WORKING_DIR/senna/sanity*
 rm $WORKING_DIR/senna/*.c 
 rm $WORKING_DIR/senna/*.h 
-rm -R $WORKING_DIR/embeddings 
+rm -R $WORKING_DIR/senna/embeddings 
 rm -R $WORKING_DIR/senna/doc 
